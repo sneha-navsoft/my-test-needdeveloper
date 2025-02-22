@@ -1,0 +1,80 @@
+@import "../variable.scss";
+
+.contact {
+  $this: &;
+  &-banner {
+    padding: 5rem 0 2.5rem;
+    .paragraph {
+      margin-block-end: 2rem;
+      text-align: center;
+    }
+  }
+}
+.contact-page {
+  &--formwrapper {
+    background: url("../assets/images/contact-form-bg.png") #af795a
+      no-repeat top left;
+    background-size: contain;
+    border-radius: 1.25rem;
+    opacity: 1;
+    min-height: 20rem;
+    padding: 3.1rem 3rem;
+    display: flex;
+    justify-content: flex-end;
+  }
+  &--formbox {
+    width: 100%;
+    max-width: 40rem;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .contact-page {
+    &--formwrapper {
+      background: #af795a;
+      background-image: none;
+      border-radius: 1.25rem;
+      opacity: 1;
+      min-height: 20rem;
+      padding: 1.75rem 1.75rem;
+    }
+    &--formbox {
+      width: 100%;
+      max-width: 100%;
+
+      .btn-gap {
+        button {
+          width: 100%;
+          max-width: 25rem;
+          margin-left: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .contact-page {
+    &--formbox {
+      width: 100%;
+      max-width: 100%;
+
+      .btn-gap {
+        button {
+          width: 100%;
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.mat-error {
+  color: red;
+  font-size: 0.875rem;
+  letter-spacing: 1px;
+  font-weight: 400;
+  text-shadow: 1px 1px 1px hsl(0deg 0% 0% / 31%);
+}
+
+

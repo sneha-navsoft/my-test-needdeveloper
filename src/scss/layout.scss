@@ -1,0 +1,431 @@
+@import "../variable.scss";
+
+.heading {
+  font-family: $fonts-secondary;
+  color: $black;
+  margin: 0;
+  line-height: 1.25;
+  font-weight: 500;
+
+  &+p.paragraph {
+    margin-block-start: 1.875rem;
+  }
+}
+h1.small-heading {
+  font-size: 1.75rem;
+  margin-top: 0;
+  color: $accent;
+}
+
+h1.heading {
+  font-size: 4rem;
+}
+
+span.heading {
+  font-size: 4rem;
+  display: block;
+}
+
+h2.heading {
+  font-size: 3.75rem;
+}
+
+h3.heading {
+  font-size: 2.85rem;
+}
+
+h4.heading {
+  font-size: 2.125rem;
+}
+
+h5.heading {
+  font-size: 1.75rem;
+}
+
+h6.heading {
+  font-size: 1.5rem;
+}
+
+
+.mat-input-element::-webkit-input-placeholder {
+  /* Edge */
+  color: lighten($primary, 25%);
+  text-transform: uppercase;
+  font-size: .775rem;
+  font-weight: 600;
+}
+
+.mat-input-element::-ms-input-placeholder {
+  /* Internet Explorer */
+  color: lighten($primary, 25%);
+  text-transform: uppercase;
+  font-size: .775rem;
+  font-weight: 600;
+}
+
+.mat-input-element::placeholder {
+  /* chrome */
+  color: lighten($primary, 25%);
+  text-transform: uppercase;
+  font-size: .775rem;
+  font-weight: 600;
+}
+
+.grecaptcha-badge {
+  z-index: 99;
+}
+
+.paragraph {
+  color: $primary;
+  margin-block-end: 0;
+  font-size: 1.125rem;
+
+  &+& {
+    margin-block-start: 1.25rem;
+  }
+
+  &.text {
+    &-lg {
+      font-size: 1.55rem;
+    }
+  }
+}
+
+.btn-gap {
+  margin-block-start: 3.125rem;
+}
+
+section.module {
+  padding: 3.125rem 0;
+
+  &[bg-color] {
+    margin: 3.125rem 0;
+
+    &[bg-color="secondary"] {
+      background-color: $secondary;
+
+      .paragraph,
+      .heading {
+        color: $white;
+      }
+    }
+
+    &[bg-color="gray5"] {
+      background-color: darken($white, 5%);
+    }
+  }
+}
+
+.people {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  $people: &;
+
+  &-image {
+    width: 6.25rem;
+    height: 6.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 50%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &+#{$people}-name,
+    &+#{$people}-des {
+      margin-block-start: 1.25rem;
+    }
+  }
+
+  &-name {
+    font-size: 1.25rem;
+    line-height: 1.25;
+    font-weight: 500;
+    font-family: $fonts-secondary;
+    color: $primary;
+  }
+
+  &-des {
+    font-size: 0.9375rem;
+    line-height: 1.25;
+    color: lighten($black, 60%);
+
+    &+#{$people}-logo {
+      margin-block-start: 1.875rem;
+    }
+  }
+
+  &-logo {
+    max-width: 6.25rem;
+    width: 100%;
+    height: 1.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.faq-wrapper {
+  margin-block-start: 3.125rem;
+}
+.faq-grid {
+  display:grid;
+  gap: .75rem 3rem;
+  grid-template-columns:repeat(2,1fr)
+}
+.dash-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  li {
+    position: relative;
+    padding: 0.5rem 0 0.5rem 1.875rem;
+
+    &:before {
+      content: "\e15b";
+      position: absolute;
+      left: 0.375rem;
+      font-family: "Material Icons Outlined";
+    }
+  }
+}
+
+/* ~~~~~~~~~ Pop-Up css ~~~~~~~~~ */
+.pop-up {
+  width: 100%;
+
+  &.auto-pop {
+    width: auto;
+  }
+
+  &.del-pop {
+    min-width: 18.75rem;
+    max-width: 18.75rem !important;
+  }
+
+  &.sm-pop {
+    min-width: 33.125rem;
+    max-width: 33.125rem !important;
+  }
+
+  &.md-pop {
+    min-width: 50rem;
+    max-width: 50rem !important;
+  }
+
+  &.lg-pop {
+    min-width: 75vw;
+    max-width: 75rem !important;
+  }
+
+  &.xl-pop {
+    min-width: 90vw;
+    max-width: 90vw !important;
+  }
+
+  &.menu-box {
+    max-width: 75rem !important;
+  }
+
+  &.column-pop {
+    max-width: 40.625rem !important;
+  }
+
+  .mat-dialog {
+    &-container {
+      padding: 0;
+      border-radius: 1.25rem;
+
+      [mat-dialog-title] {
+        margin: 0;
+        width: 100%;
+        padding: 0.5rem 0.5rem 0.5rem 1.25rem;
+      }
+
+      [mat-dialog-content] {
+        padding: 3.125rem;
+        margin: 0;
+      }
+
+      [mat-dialog-actions] {
+        padding: 0.9375rem 1.25rem;
+        margin: 0;
+        min-height: 0;
+      }
+    }
+  }
+}
+
+/* ~~~~~~~~~ Pop-Up css ~~~~~~~~~ */
+
+.para-link {
+  color: $accent;
+  display: inline-block;
+  font-weight: 600;
+  &:hover {
+    color: $accent;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  h1.heading {
+    font-size: 3.125rem;
+  }
+
+  span.heading {
+    font-size: 3.125rem;
+  }
+
+  h2.heading {
+    font-size: 2.5rem;
+  }
+
+  h3.heading {
+    font-size: 1.875rem;
+  }
+
+  h4.heading {
+    font-size: 1.875rem;
+  }
+
+  h5.heading {
+    font-size: 1.25rem;
+  }
+
+  h6.heading {
+    font-size: 1.125rem;
+  }
+
+  section.module {
+    padding: 1.875rem 0;
+  }
+
+  .pop-up {
+    width: 100%;
+
+    .mat-dialog {
+      &-container {
+        padding: 0;
+        border-radius: 1.25rem;
+
+        [mat-dialog-title] {
+          margin: 0;
+          width: 100%;
+          padding: 0.5rem 0.5rem 0.5rem 1rem;
+        }
+
+        [mat-dialog-content] {
+          padding: 1.125rem;
+          margin: 0;
+        }
+
+        [mat-dialog-actions] {
+          padding: 0.9375rem 1.25rem;
+          margin: 0;
+          min-height: 0;
+        }
+      }
+    }
+  }
+
+  .btn-gap {
+    margin-block-start: 2rem;
+  }
+  .faq-wrapper{
+    .faq-grid {
+      grid-template-columns:1fr;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  h1.small-heading {
+    font-size: 1.5rem;
+  }
+
+  h1.heading {
+    font-size: 2.125rem;
+  }
+
+  span.heading {
+    font-size: 2.125rem;
+  }
+
+  h2.heading {
+    font-size: 1.875rem;
+  }
+
+  h3.heading {
+    font-size: 1.5rem;
+  }
+
+  h4.heading {
+    font-size: 1.125rem;
+  }
+
+  h5.heading {
+    font-size: 1.25rem;
+  }
+
+  h6.heading {
+    font-size: 1rem;
+  }
+
+  section.module {
+    padding: 1.875rem 0;
+  }
+
+  .btn-gap {
+    &.d-flex {
+      flex-direction: column;
+      flex-wrap: nowrap;
+    }
+
+    .re-captcha {
+      margin-bottom: .125rem;
+      width: 100%;
+    }
+  }
+
+  .mat-select-panel {
+    max-width: 100% !important;
+    min-width: 75px !important;
+  }
+
+  .mat-input-element::-webkit-input-placeholder {
+    /* Edge */
+    color: lighten($primary, 25%);
+    text-transform: uppercase;
+    font-size: .75rem;
+    font-weight: 600;
+  }
+
+  .mat-input-element::-ms-input-placeholder {
+    /* Internet Explorer */
+    color: lighten($primary, 25%);
+    text-transform: uppercase;
+    font-size: .75rem;
+    font-weight: 600;
+  }
+
+  .mat-input-element::placeholder {
+    /* chrome */
+    color: lighten($primary, 25%);
+    text-transform: uppercase;
+    font-size: .75rem;
+    font-weight: 600;
+  }
+}
